@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Legendary Anime Hall</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      text-align: center;
+      font-size: 48px;
+      color: #FFD700;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px #FFD700;
+      animation: pulseGlow 2s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      from { text-shadow: 0 0 10px #FFD700; }
+      to   { text-shadow: 0 0 25px #FFD700, 0 0 30px #FFA500; }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .anime-card {
+      display: flex;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 20px 0;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .anime-card img {
+      width: 180px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .anime-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .anime-card-content {
+      padding: 20px;
+    }
+
+    .anime-card h2 {
+      color:rgb(210, 170, 9);
+      margin-top: 0;
+    }
+
+    .anime-card p {
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #111;
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Stagger effect by using nth-child */
+    .anime-card:nth-child(1) { animation-delay: 1s; }
+    .anime-card:nth-child(2) { animation-delay:2s; }
+    .anime-card:nth-child(3) { animation-delay: 3s; }
+    .anime-card:nth-child(4) { animation-delay: 4s; }
+    .anime-card:nth-child(5) { animation-delay: 5s; }
+    .anime-card:nth-child(6) { animation-delay: 6s; }
+    .anime-card:nth-child(7) { animation-delay: 7s; }
+
+  </style>
+</head>
+<body>
+
+<header>
+  🌟 Legendary Anime Hall 🌟
+  <p style="font-size: 20px; color: #ccc;">Where icons live forever</p>
+</header>
+
+<div class="container">
+
+  <div class="anime-card">
+    <img src="./aot.jpg" alt="Attack on Titan">
+    <div class="anime-card-content">
+      <h2>Attack on Titan</h2>
+      <p>Humanity’s last stand against monstrous Titans—full of action, mystery, and heart.</p>
+    </div>
+  </div>
+
+  <div class="anime-card">
+    <img src="./fullmeatl.png" alt="Fullmetal Alchemist: Brotherhood">
+    <div class="anime-card-content">
+      <h2>Fullmetal Alchemist: Brotherhood</h2>
+      <p>Alchemy, loyalty, and truth—an unforgettable journey of two brothers in a broken world.</p>
+    </div>
+  </div>
+
+  <div class="anime-card">
+    <img src="https://example.com/deathnote.jpg" alt="Death Note">
+    <div class="anime-card-content">
+      <h2>Death Note</h2>
+      <p>The ultimate cat-and-mouse game—justice, power, and morality collide in this thriller.</p>
+    </div>
+  </div>
+
+  <div class="anime-card">
+    <img src="https://example.com/demonslayer.jpg" alt="Demon Slayer">
+    <div class="anime-card-content">
+      <h2>Demon Slayer</h2>
+      <p>Stunning visuals, moving storylines, and powerful battles make this anime unforgettable.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ⚔️ build with love
+</footer>
+
+</body>
+</html>
